@@ -34,7 +34,7 @@ RUN npm install
 COPY . /app
 
 # Copiar el archivo de configuración rclone.conf al contenedor
-COPY rclone.conf /root/.config/rclone/rclone.conf
+COPY ./rclone.conf /root/.config/rclone/rclone.conf
 
 # Exponer el puerto 3000 para la API Node.js
 EXPOSE 3000
