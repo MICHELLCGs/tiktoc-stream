@@ -1,0 +1,11 @@
+# Configuración del servidor
+PORT=3000
+
+# Token de autenticación
+AUTH_TOKEN=
+
+# Configuración de Rclone
+RCLONE_CONFIG_PATH=/root/.config/rclone/rclone.conf
+RCLONE_LOG_PATH=/tmp/rclone.log
+RCLONE_ADDR=:8080
+

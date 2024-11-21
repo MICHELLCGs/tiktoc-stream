@@ -1,0 +1,19 @@
+services:
+  nodejs:
+    build: .
+    volumes:
+      - ./rclone.conf:/root/.config/rclone/rclone.conf                                   
+    ports:
+      - "3000:3000"
+      - "8080:8080"
+    restart: always
+
+  nginx:
+    image: nginx:latest
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+    ports:
+      - "80:80"
+    depends_on:
+      - nodejs
+    restart: always

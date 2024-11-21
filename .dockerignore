@@ -1,0 +1,4 @@
+node_module
+.env production
+nginx.conf
+README.md
